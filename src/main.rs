@@ -20,7 +20,7 @@ fn main() {
 
     for line in &lines {
         if line == "<ITEM>" {
-            items = items + 1;
+            items += 1;
         }
     }
 
@@ -30,15 +30,15 @@ fn main() {
     let mut counted_items = 0;
 
     println!("-PHORTUNE---------------------------------------");
-    println!("");
+    println!();
      
     for line in &lines {
          if line == "<ITEM>" {
-             counted_items = counted_items + 1;
+             counted_items += 1;
          } else if counted_items == selected_fortune {
              println!("{}",line);
          }
     };
-    println!("");
+    println!();
     println!("------------------------------------------------");
 }
